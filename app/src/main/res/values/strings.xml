@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ToDo App</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_login">Login</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_email">Not a valid email</string>
+    <string name="invalid_password">Password can not be empty</string>
+    <string name="add_todo">Add TODO</string>
+    <string name="hint_title">Title*</string>
+    <string name="hint_description">Description</string>
+    <string name="button_save">Save</string>
+    <string name="empty_not_saved">Empty not saved</string>
+    <string name="text_daily">Daily</string>
+    <string name="text_monthly">Monthly</string>
+    <string name="invalid_title">Title can not be empty</string>
+    <string name="invalid_time">Time can not be empty</string>
+    <string name="dd_mm_yyyy">dd/MM/yyyy</string>
+    <string name="hh_mm">HH:mm*</string>
+    <string name="warning">Alert!</string>
+    <string name="confirm_delete">Are you sure to delete?</string>
+    <string name="proceed">Proceed</string>
+
+</resources>

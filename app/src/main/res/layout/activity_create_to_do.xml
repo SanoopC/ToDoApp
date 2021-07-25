@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".create.view.CreateToDoActivity">
+
+    <EditText
+        android:id="@+id/edit_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/big_padding"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/hint_title"
+        android:inputType="textAutoComplete"
+        android:textSize="@dimen/text_size_18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/big_padding"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/hint_description"
+        android:inputType="textAutoComplete"
+        android:textSize="@dimen/text_size_18"
+        app:layout_constraintTop_toBottomOf="@id/edit_title" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_date_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/big_padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_description">
+
+        <ImageButton
+            android:id="@+id/button_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_calendar_today_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/dd_mm_yyyy"
+            app:layout_constraintBottom_toBottomOf="@id/button_calendar"
+            app:layout_constraintStart_toEndOf="@id/button_calendar"
+            app:layout_constraintTop_toTopOf="@id/button_calendar" />
+
+        <ImageButton
+            android:id="@+id/button_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_access_time_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/hh_mm"
+            app:layout_constraintBottom_toBottomOf="@id/button_calendar"
+            app:layout_constraintStart_toEndOf="@id/button_time"
+            app:layout_constraintTop_toTopOf="@id/button_calendar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/big_padding"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_date_time">
+
+        <RadioButton
+            android:id="@+id/radio_daily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/text_daily" />
+
+        <RadioButton
+            android:id="@+id/radio_weekly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/text_monthly" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/big_padding"
+        android:enabled="false"
+        android:text="@string/button_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radio_group" />
+</androidx.constraintlayout.widget.ConstraintLayout>
